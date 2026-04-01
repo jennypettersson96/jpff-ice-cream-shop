@@ -6,19 +6,23 @@ import milkshakeImg from "@/assets/milkshake.jpg";
 import { IceCream, Mail, Phone } from "lucide-react";
 
 const Index = () => {
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md shadow-sm">
         <div className="container mx-auto flex items-center justify-between py-4 px-4">
-          <a href="#" className="flex items-center gap-2 text-primary font-bold text-2xl" style={{ fontFamily: "'Fredoka One', cursive" }}>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-2 text-primary font-bold text-2xl cursor-pointer" style={{ fontFamily: "'Fredoka One', cursive" }}>
             <IceCream className="w-8 h-8" />
             JPFF
-          </a>
+          </button>
           <div className="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-wide">
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">About Us</a>
-            <a href="#products" className="text-foreground hover:text-primary transition-colors">Our Ice Creams</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+            <button onClick={() => scrollTo("about")} className="text-foreground hover:text-primary transition-colors cursor-pointer">About Us</button>
+            <button onClick={() => scrollTo("products")} className="text-foreground hover:text-primary transition-colors cursor-pointer">Our Ice Creams</button>
+            <button onClick={() => scrollTo("contact")} className="text-foreground hover:text-primary transition-colors cursor-pointer">Contact</button>
           </div>
         </div>
       </nav>
