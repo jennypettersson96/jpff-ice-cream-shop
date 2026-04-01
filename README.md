@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# JPFF Ice Cream Shop
 
-TODO: Document your project here
+A website for JPFF Ice Cream Shop built with React, TypeScript, and Tailwind CSS.
