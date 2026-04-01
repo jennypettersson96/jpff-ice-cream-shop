@@ -5,7 +5,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: process.env.GITHUB_PAGES ? "/jpff-ice-cream-shop/" : "/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
